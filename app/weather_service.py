@@ -12,7 +12,7 @@ from app import APP_ENV
 load_dotenv()
 
 OPEN_WEATHER_API_KEY = os.getenv("OPEN_WEATHER_API_KEY")
-MY_ZIP = os.getenv("MY_ZIP", default="20057")
+MY_ZIP = os.getenv("MY_ZIP", default="10012")
 COUNTRY_CODE = os.getenv("COUNTRY_CODE", default="US")
 
 def human_friendly_temp(my_temperature_f):
