@@ -1,15 +1,15 @@
 # app/weather_service.py
 
-import os
+import os #inbuilt python modules
 import json
 from pprint import pprint
 
-import requests
+import requests #third party packages that need to be installed via pip
 from dotenv import load_dotenv
 
-from app import APP_ENV
+from app import APP_ENV #some kind of env variable in the init file. Local import from directory called app
 
-load_dotenv()
+load_dotenv() #load contents of .env file into environment so os can read
 
 OPEN_WEATHER_API_KEY = os.getenv("OPEN_WEATHER_API_KEY")
 MY_ZIP = os.getenv("MY_ZIP", default="10012")
@@ -39,7 +39,9 @@ def get_hourly_forecasts(zip_code=MY_ZIP, country_code=COUNTRY_CODE):
         })
     return result
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
+    #only run the code below if this script has been run from the command-line
+    # not when we're importing functions from this script into another script
 
     if APP_ENV == "development":
         zip_code = input("PLEASE INPUT A ZIP CODE (e.g. 06510): ")
