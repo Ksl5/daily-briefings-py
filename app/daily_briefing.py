@@ -1,5 +1,5 @@
 # app/daily_briefing.py
-
+# python -m app.daily_briefing.py  ..... for local files
 import os #inbuilt python modules
 from dotenv import load_dotenv
 from datetime import date
@@ -7,7 +7,7 @@ from datetime import date
 
 from app import APP_ENV
 from app.weather_service import get_hourly_forecasts #need the init file to import these local files
-from app.email_service import send_email
+from app.email_service import send_email 
 
 load_dotenv()
 
